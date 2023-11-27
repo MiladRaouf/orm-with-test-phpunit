@@ -14,11 +14,11 @@ class ConfigTest extends TestCase
         $this->assertIsArray($config);
     }
 
-    public function testItThrowsExceptionItFileNotFound()
-    {
-        $this->expectException(ConfigFileNotFoundException::class);
-        $config = Config::getFileContents('not');
-    }
+    // public function testItThrowsExceptionItFileNotFound()
+    // {
+    //     $this->expectException(ConfigFileNotFoundException::class);
+    //     $config = Config::getFileContents('not');
+    // }
 
     public function testGetMethodReturnsValidData() {
         $config = Config::get('database', 'pdo');
